@@ -3,10 +3,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class NumberTester implements NumberTest{
-    //...
+    private NumberTest oddTester;
+    private NumberTest primeTester;
+    private NumberTest palindromeTester;
+    private String filename;
 
     public NumberTester(String fileName) {
-        //TODO
+        this.filename = fileName;
     }
 
     public void setOddEvenTester(NumberTest oddTester) {
@@ -23,5 +26,10 @@ public class NumberTester implements NumberTest{
 
     public void testFile() {
         //TODO
+    }
+
+    @Override
+    public boolean testNumber(int number) {
+        return false;
     }
 }
